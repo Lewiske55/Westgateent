@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="png" href="icon.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search Website</title>
+    <!-- font awesome icons cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- custom css -->
+    <link rel = "stylesheet" href = "main.css">
+</head>
+<body>
+    
+    <div class = "wrapper">
+        <!-- logo -->
+        <div class = "logo">
+           
+            <div class = "container">
+                <a href="index.html"><p>Westgate<span>Ent</span></p></a>
+            </div>
+        </div>
+
+
+        <style>
+            body {
+              font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            .navbar {
+              overflow: hidden;
+              background-color: #333;
+            }
+            
+            .navbar a {
+              float: left;
+              font-size: 16px;
+              color: white;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+              font-weight: bold;
+            }
+            
+            .dropdown {
+              float: left;
+              overflow: hidden;
+            }
+            
+            .dropdown .dropbtn {
+              font-size: 16px;  
+              border: none;
+              outline: none;
+              color: white;
+              padding: 14px 16px;
+              background-color: inherit;
+              font-family: inherit;
+              margin: 0;
+              font-weight: bold;
+            }
+            
+            .navbar a:hover, .dropdown:hover .dropbtn {
+              background-color: rgb(13, 236, 218);
+            }
+            
+            .dropdown-content {
+              display: none;
+              position: absolute;
+              background-color: #050101;
+              min-width: 160px;
+              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+              z-index: 1;
+
+              font-weight: bold;
+            }
+            
+            .dropdown-content a {
+              float: none;
+              color: rgb(255, 255, 255);
+              padding: 12px 16px;
+              text-decoration: none;
+              display: block;
+              text-align: left;
+              
+              
+            }
+            
+            .dropdown-content a:hover {
+              background-color: rgb(248, 224, 6);
+              font-weight: bold;
+            }
+            
+            .dropdown:hover .dropdown-content {
+              display: block;
+              font-weight: bold;
+            }
+            </style>
+            </head>
+            <body>
+            
+            <div class="navbar">
+              <a href="index.html">Movies</a>
+              <a href="TVShow.html">TVShows</a>
+              <div class="dropdown">
+                <button class="dropbtn">Genre 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Action</a>
+                  <a href="#">Animation</a>
+                  <a href="#">Anime</a>
+                  <a href="#">Drama</a>
+                  <a href="#">Horror</a>
+                  <a href="#">Mystery</a>
+                  <a href="#">Reality</a>
+                  <a href="#">Sci-fi</a>
+                </div>
+                
+              </div>
+              <a href="#news">Services</a>
+            </div>
+            
+
+
+
+
+
+
+        <!-- end of logo -->
+        <!-- search container -->
+        <div class = "search-container">
+            <div class = "search-element">
+                <h3>Search Movie:</h3>
+                <input type = "text" class = "form-control" placeholder="Search Movie Title ..." id = "movie-search-box" onkeyup="findMovies()" onclick = "findMovies()">
+
+                <div class = "search-list" id = "search-list">
+                    <!-- list here -->
+                    <!-- <div class = "search-list-item">
+                        <div class = "search-item-thumbnail">
+                            <img src = "medium-cover.jpg">
+                        </div>
+                        <div class = "search-item-info">
+                            <h3>Guardians of the Galaxy Vol. 2</h3>
+                            <p>2017</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- end of search container -->
+        
+        
+        
+       
+        
+        
+        <!-- result container -->
+        <div class = "container">
+            <div class = "result-container">
+                <div class = "result-grid" id = "result-grid">
+                    <!-- movie information here -->
+                    <div class = "movie-poster">
+                      <!-- <img src = "medium-cover.jpg" alt = "movie poster">
+                    </div>
+                    <div class = "movie-info">
+                        <h3 class = "movie-title">Guardians of the Galaxy Vol. 2</h3>
+                        <ul class = "movie-misc-info">
+                            <li class = "year">Year: 2017</li>
+                            <li class = "rated">Ratings: PG-13</li>
+                            <li class = "released">Released: 05 May 2017</li>
+                        </ul>
+                        <p class = "genre"><b>Genre:</b> Action, Adventure, Comedy</p>
+                        <p class = "writer"><b>Writer:</b> James Gunn, Don Abnett, Andy Lanning</p>
+                        <p class = "actors"><b>Actors: </b>Chris Pratt, Zoe Saldana, Dave Bautista</p>
+                        <p class = "plot"><b>Plot:</b> The Guardians struggle to keep together as a team while dealing with their personal family issues, notably Star-Lord's ecounter with his father the ambitious celestial being Ego.</p>
+                        <p class = "language"><b>Language:</b> English</p>
+                        <p class = "awards"><b><i class = "fas fa-award"></i></b> Nominated for 1 Oscar</p>  -->
+                        
+             </div> 
+                </div>
+            </div>
+                    
+    </div>
+    <style>
+            
+        #ftr {
+            background-color: var(--md-dark-color);
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  padding: 5px 0;
+  
+}  
+
+:root{
+    --md-dark-color: #1d1d1d;
+    --dark-color: #171717;
+    --light-dark-color: #292929;
+    --yellow-color: #d4aa11;
+}
+
+
+
+
+
+
+    .div {
+  box-sizing: border-box;
+}      
+   .div {
+  display: block;
+}       
+          
+  .dflex {
+  display: flex;
+  flex-wrap: wrap;
+}   
+        
+
+          
+
+          
+.dflex div {
+  width: 25%;
+  padding: 1px;
+  
+}          
+          
+.mxwd {
+  max-width: 900px;
+  margin: 0 auto;
+}          
+          
+ .mxwd a{
+  float: left;
+              font-size: 16px;
+              color: rgb(255, 251, 7);
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+              font-weight: bold;
+              
+ }
+          
+ 
+
+      </style>
+      
+      
+      <div class="header">
+        <center> <p>TVShows</p></center>
+
+      </div>
+    
+    
+    
+      
+         
+    
+    <div id="ftr">
+        <div class="mxwd">
+            <div class="dflex">
+                
+                <div><a href="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" title="The Last Of Us">
+                    <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="The Last Of Us">
+                    <span class="mtl">The Last Of Us</span>
+                    </a>
+                </div>
+                
+                <div><a href="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/eU1i6eHXlzMOlEq0ku1Rzq7Y4wA.jpg" title="The Mandalorian">
+                    <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/eU1i6eHXlzMOlEq0ku1Rzq7Y4wA.jpg" alt="The Mandalorian">
+                    <span class="mtl">The Mandalorian</span>
+                    </a>
+                </div>
+                
+                
+                <div><a href="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9PFonBhy4cQy7Jz20NpMygczOkv.jpg" title="Wednesday">
+                    <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9PFonBhy4cQy7Jz20NpMygczOkv.jpg" alt="Wednesday)">
+                    <span class="mtl">Wednesday</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1X4h40fcB4WWUmIBK0auT4zRBAV.jpg" title="House Of Dragon">
+                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1X4h40fcB4WWUmIBK0auT4zRBAV.jpg" alt="House Of Dragon">
+                        <span class="mtl">House Of Dragon</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kY0BogCM8SkNJ0MNiHB3VTM86Tz.jpg" title="Chucky">
+                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kY0BogCM8SkNJ0MNiHB3VTM86Tz.jpg" alt="Chucky">
+                        <span class="mtl">Chucky</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/mYLOqiStMxDK3fYZFirgrMt8z5d.jpg" title="The Ring Of Power">
+                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/mYLOqiStMxDK3fYZFirgrMt8z5d.jpg" alt="The Ring Of Power">
+                        <span class="mtl">The Ring Of Power</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/59SVNwLfoMnZPPB6ukW6dlPxAdI.jpg" title="Star Wars: Andor">
+                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/59SVNwLfoMnZPPB6ukW6dlPxAdI.jpg" alt="Star Wars: Andor">
+                        <span class="mtl">Star Wars: Andor </span>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/m7tG5E1EbywuwTsl6hq990So0Bx.jpg" title="Cobra Kai">
+                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/m7tG5E1EbywuwTsl6hq990So0Bx.jpg" alt="Cobra Kai">
+                        <span class="mtl">Cobra Kai</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/cvhNj9eoRBe5SxjCbQTkh05UP5K.jpg" title=" Rick and Morty">
+                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/cvhNj9eoRBe5SxjCbQTkh05UP5K.jpg" alt="Rick and Morty">
+                        <span class="mtl">Rick and Morty</span>
+                    </a>
+                </div>
+                
+                <div>
+                    <a href="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5xz2orV8f0usyrfGNshcoXHmiaV.jpg" title="She-Hulk">
+                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5xz2orV8f0usyrfGNshcoXHmiaV.jpg" alt="She-Hulk">
+                        <span class="mtl">She-Hulk</span>
+                    </a>
+                      </div>
+                    
+                <div>
+                    <a href="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/q54qEgagGOYCq5D1903eBVMNkbo.jpg" title="The Sandman">
+                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/q54qEgagGOYCq5D1903eBVMNkbo.jpg" alt="The Sandman">
+                        <span class="mtl">The Sandman</span>
+                    </a>
+                      </div>
+                    
+                <div>
+                    <a href="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xvSUOU0IEbLka8RixocDfwgkdWZ.jpg" title="Stranger Things">
+                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xvSUOU0IEbLka8RixocDfwgkdWZ.jpg" alt="Stranger Things">
+                        <span class="mtl">Stranger Things</span>
+                    </a>
+                      </div>
+                    
+                <div>
+                    <a href="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/yGToGjAZ66awFp017hppmsYqdjb.jpg" title="The Boys">
+                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/yGToGjAZ66awFp017hppmsYqdjb.jpg" alt="The Boys">
+                        <span class="mtl">The Boys</span>
+                    </a>
+                     </div> 
+                    
+               <div>
+                    <a href="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ynu5531SOmyhFcMePPnFdC0XfrZ.jpg" title="Obi Wan Kenobi ">
+                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ynu5531SOmyhFcMePPnFdC0XfrZ.jpg" alt="Obi Wan Kenobi">
+                        <span class="mtl">Obi Wan Kenobi </span>
+                    </a>     
+                  </div>
+                    
+                
+                <div>
+                    <a href="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/x6FsYvt33846IQnDSFxla9j0RX8.jpg" title="MoonKnight">
+                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/x6FsYvt33846IQnDSFxla9j0RX8.jpg" alt="MoonKnight">
+                        <span class="mtl">MoonKnight</span>
+                    </a>
+                   </div>
+              
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="mhid">
+                    <a href="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xjsx6rGEgHl2tUqkimo6Bz2KzVo.jpg" title="The Night Agent">
+                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xjsx6rGEgHl2tUqkimo6Bz2KzVo.jpg" alt="The Night Agent">
+                        <span class="mtl">The Night Agent</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<div class="footer">
+  <center><a href="index.html"><p>Westgate<span>Ent</span></p></a></center>
+  <br>
+  <br>
+  <center>@2023-2026</center>
+  <center>About   .   FAQ   .  Contact . Terms of Service  .   Privacy policy </center>
+
+</div>
+    <!-- movie app js -->
+    <script src = "script.js"></script>
+    
+    </div>
+    
+</body>
+</html>
