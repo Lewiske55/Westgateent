@@ -30,7 +30,7 @@ img{
 }
 .wrapper{
     min-height: 100vh;
-    background-color: var(--dark-color);
+    background-color: var(--md-dark-color);
 }
 .wrapper .container{
     max-width: 1200px;
@@ -160,13 +160,13 @@ img{
 
 /* js related class */
 .hide-search-list{
-    display: hide;
+    display: none;
 }
 
 /* movie result */
 .result-container{
     position: relative;
-    padding: 3rem 0;
+    padding: 0;
 }
 .movie-poster img{
     max-width: 300px;
